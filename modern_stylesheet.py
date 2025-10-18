@@ -270,9 +270,9 @@ QScrollBar::handle:horizontal:hover {
 QTabWidget::pane {
     border: 1px solid #555555;
     border-radius: 4px;
-}
-
-QTabBar::tab {
+    }
+    
+    QTabBar::tab {
     background-color: #404040;
     padding: 5px 10px;
     border-top-left-radius: 4px;
