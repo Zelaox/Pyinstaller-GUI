@@ -1,0 +1,82 @@
+2025-10-18 16:50:49,147 [INFO]: Drag and drop list widget initialized with extensions: .py, .pyw
+2025-10-18 16:50:49,147 [INFO]: Initializing file list with drag & drop support
+2025-10-18 16:50:49,320 [INFO]: Loaded profile: Default
+2025-10-18 16:50:49,322 [INFO]: Theme changed to light
+2025-10-18 16:50:51,681 [INFO]: Opening file dialog to add Python files
+2025-10-18 16:50:53,278 [INFO]: Added 1 Python files via dialog
+2025-10-18 16:50:56,335 [INFO]: Packaging D:/AI/ChatGPT/My_programs/exe_converter/enhanced_pyinstaller_gui.py with profile Default
+2025-10-18 16:50:56,335 [INFO]: Command: pyinstaller --onefile --windowed --distpath dist --clean D:/AI/ChatGPT/My_programs/exe_converter/enhanced_pyinstaller_gui.py
+2025-10-18 16:50:56,346 [INFO]: Progress: 20%
+2025-10-18 16:50:56,346 [INFO]: Analyzing imports...
+2025-10-18 16:50:58,361 [INFO]: Progress: 40%
+2025-10-18 16:50:58,361 [INFO]: Collecting modules...
+2025-10-18 16:51:00,362 [INFO]: Progress: 60%
+2025-10-18 16:51:00,362 [INFO]: Building EXE...
+2025-10-18 16:51:02,369 [INFO]: Progress: 80%
+2025-10-18 16:51:02,369 [INFO]: Finalizing package...
+2025-10-18 16:51:15,625 [INFO]: Conversion completed!
+2025-10-18 16:51:15,625 [INFO]: Conversion completed successfully
+2025-10-18 16:51:15,625 [INFO]: Packaging completed!
+2025-10-18 16:53:16,053 [INFO]: Creating executable for D:/AI/ChatGPT/My_programs/exe_converter/enhanced_pyinstaller_gui.py with profile Default
+2025-10-18 16:53:16,054 [INFO]: Command: pyinstaller --onefile --windowed --distpath dist --clean D:/AI/ChatGPT/My_programs/exe_converter/enhanced_pyinstaller_gui.py
+2025-10-18 16:53:16,062 [INFO]: Progress: 20%
+2025-10-18 16:53:16,063 [INFO]: Analyzing imports...
+2025-10-18 16:53:18,068 [INFO]: Progress: 40%
+2025-10-18 16:53:18,068 [INFO]: Collecting modules...
+2025-10-18 16:53:20,080 [INFO]: Progress: 60%
+2025-10-18 16:53:20,080 [INFO]: Building EXE...
+2025-10-18 16:53:22,085 [INFO]: Progress: 80%
+2025-10-18 16:53:22,086 [INFO]: Finalizing package...
+2025-10-18 16:53:36,332 [INFO]: Conversion completed!
+2025-10-18 16:53:36,332 [INFO]: Conversion completed successfully
+2025-10-18 16:53:36,333 [INFO]: Executable creation completed. Creating installer...
+2025-10-18 16:53:36,334 [INFO]: Looking for executable at: D:\AI\ChatGPT\My_programs\exe_converter\dist\enhanced_pyinstaller_gui.exe
+2025-10-18 16:55:07,414 [INFO]: Drag and drop list widget initialized with extensions: .py, .pyw
+2025-10-18 16:55:07,414 [INFO]: Initializing file list with drag & drop support
+2025-10-18 16:55:07,613 [INFO]: Loaded profile: Default
+2025-10-18 16:55:07,615 [INFO]: Theme changed to light
+2025-10-18 16:55:12,858 [INFO]: Opening file dialog to add Python files
+2025-10-18 16:55:15,245 [INFO]: Added 1 Python files via dialog
+2025-10-18 16:55:17,988 [INFO]: Creating executable for D:/AI/ChatGPT/My_programs/exe_converter/enhanced_pyinstaller_gui.py with profile Default
+2025-10-18 16:55:17,990 [INFO]: Command: pyinstaller --onefile --windowed --distpath dist --clean D:/AI/ChatGPT/My_programs/exe_converter/enhanced_pyinstaller_gui.py
+2025-10-18 16:55:17,999 [INFO]: Progress: 20%
+2025-10-18 16:55:18,000 [INFO]: Analyzing imports...
+2025-10-18 16:55:20,008 [INFO]: Progress: 40%
+2025-10-18 16:55:20,008 [INFO]: Collecting modules...
+2025-10-18 16:55:22,010 [INFO]: Progress: 60%
+2025-10-18 16:55:22,011 [INFO]: Building EXE...
+2025-10-18 16:55:24,016 [INFO]: Progress: 80%
+2025-10-18 16:55:24,016 [INFO]: Finalizing package...
+2025-10-18 16:55:37,186 [INFO]: Conversion completed!
+2025-10-18 16:55:37,186 [INFO]: Conversion completed successfully
+2025-10-18 16:55:37,187 [INFO]: Executable creation completed. Creating installer...
+2025-10-18 16:55:37,187 [INFO]: Looking for executable at: D:\AI\ChatGPT\My_programs\exe_converter\dist\enhanced_pyinstaller_gui.exe
+2025-10-18 16:58:06,700 [INFO]: Installer creation cancelled by user.
+2025-10-18 16:58:12,742 [INFO]: Drag and drop list widget initialized with extensions: .py, .pyw
+2025-10-18 16:58:12,742 [INFO]: Initializing file list with drag & drop support
+2025-10-18 16:58:12,919 [INFO]: Loaded profile: Default
+2025-10-18 16:58:12,922 [INFO]: Theme changed to light
+2025-10-18 16:58:19,036 [INFO]: Opening file dialog to add Python files
+2025-10-18 16:59:15,121 [INFO]: Added 1 Python files via dialog
+2025-10-18 16:59:19,846 [INFO]: Creating executable for D:/AI/ChatGPT/My_programs/exe_converter/enhanced_pyinstaller_gui.py with profile Default
+2025-10-18 16:59:19,846 [INFO]: Command: pyinstaller --onefile --windowed --distpath dist --clean D:/AI/ChatGPT/My_programs/exe_converter/enhanced_pyinstaller_gui.py
+2025-10-18 16:59:19,856 [INFO]: Progress: 20%
+2025-10-18 16:59:19,856 [INFO]: Analyzing imports...
+2025-10-18 16:59:21,863 [INFO]: Progress: 40%
+2025-10-18 16:59:21,863 [INFO]: Collecting modules...
+2025-10-18 16:59:23,864 [INFO]: Progress: 60%
+2025-10-18 16:59:23,865 [INFO]: Building EXE...
+2025-10-18 16:59:25,870 [INFO]: Progress: 80%
+2025-10-18 16:59:25,871 [INFO]: Finalizing package...
+2025-10-18 16:59:38,761 [INFO]: Conversion completed!
+2025-10-18 16:59:38,762 [INFO]: Conversion completed successfully
+2025-10-18 16:59:38,762 [INFO]: Executable creation completed. Creating installer...
+2025-10-18 16:59:38,763 [INFO]: Looking for executable at: D:\AI\ChatGPT\My_programs\exe_converter\dist\enhanced_pyinstaller_gui.exe
+2025-10-18 17:01:25,688 [INFO]: Copying executable from D:\AI\ChatGPT\My_programs\exe_converter\dist\enhanced_pyinstaller_gui.exe to build\enhanced_pyinstaller_gui.exe
+2025-10-18 17:01:25,707 [INFO]: Using executable name: enhanced_pyinstaller_gui.exe
+2025-10-18 17:01:25,710 [INFO]: Created Inno Setup script at build\setup.iss
+2025-10-18 17:01:25,710 [INFO]: Compiling installer...
+2025-10-18 17:01:25,715 [INFO]: Compiling installer...
+2025-10-18 17:01:30,060 [INFO]: Conversion completed!
+2025-10-18 17:01:30,061 [INFO]: Installer compiled successfully
+2025-10-18 17:01:30,061 [INFO]: Installer creation completed successfully!

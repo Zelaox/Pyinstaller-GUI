@@ -1,0 +1,9 @@
+{
+    "version": "1.0.0",
+    "build_date": "2023-11-15",
+    "channel": "stable",
+    "name": "Enhanced PyInstaller GUI",
+    "description": "A modern graphical interface for PyInstaller with advanced features",
+    "author": "Kim Nilsson/Zelaox",
+    "website": "https://github.com/your-username/enhanced-pyinstaller-gui"
+} 
