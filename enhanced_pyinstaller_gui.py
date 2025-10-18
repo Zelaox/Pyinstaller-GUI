@@ -1252,6 +1252,10 @@ class EnhancedPyInstallerGUI(QMainWindow):
         if options.get("upx_compress", False):
             cmd.append("--upx-dir=upx")
         
+        # Add administrator privileges option
+        if options.get("require_admin", False):
+            cmd.append("--uac-admin")
+        
         # Add debug option - with proper value
         if options.get("debug", False):
             cmd.extend(["-d", "all"])  # Use "-d all" instead of "--debug"
@@ -1468,6 +1472,8 @@ OutputDir=build\\Output
 OutputBaseFilename={output_basename}
 Compression={compression}
 SolidCompression=yes
+PrivilegesRequired=admin
+PrivilegesRequiredOverridesAllowed=dialog
 """
 
         # Add license file if provided

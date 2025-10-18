@@ -600,6 +600,11 @@ class ProfileEditDialog(QDialog):
         self.debug_checkbox = QCheckBox("Debug mode (include debugging information)")
         advanced_group_layout.addRow("", self.debug_checkbox)
         
+        # Require administrator privileges
+        self.require_admin_checkbox = QCheckBox("Require Administrator privileges (UAC elevation)")
+        self.require_admin_checkbox.setToolTip("The executable will request administrator rights when launched")
+        advanced_group_layout.addRow("", self.require_admin_checkbox)
+        
         layout.addLayout(advanced_group_layout)
         
         # Hidden imports
@@ -638,6 +643,7 @@ class ProfileEditDialog(QDialog):
         self.clean_build_checkbox.setChecked(options.get("clean_build", True))
         self.upx_compress_checkbox.setChecked(options.get("upx_compress", False))
         self.debug_checkbox.setChecked(options.get("debug", False))
+        self.require_admin_checkbox.setChecked(options.get("require_admin", False))
         
         # Load hidden imports
         hidden_imports = options.get("hidden_imports", [])
@@ -677,6 +683,7 @@ class ProfileEditDialog(QDialog):
             "clean_build": self.clean_build_checkbox.isChecked(),
             "upx_compress": self.upx_compress_checkbox.isChecked(),
             "debug": self.debug_checkbox.isChecked(),
+            "require_admin": self.require_admin_checkbox.isChecked(),
             "hidden_imports": hidden_imports,
             "data_files": [],  # Not editable in this dialog
             "binary_files": [],  # Not editable in this dialog

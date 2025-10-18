@@ -1,0 +1,59 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+*.egg
+*.spec
+
+# PyInstaller
+*.manifest
+*.spec
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+logs/
+*.log
+
+# Installer outputs
+installer/
+*.exe
+*.msi
+*.dmg
+
+# Test files
+test_*.py
+tests/
+
+# Environment
+venv/
+env/
+ENV/
+.env
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Inno Setup
+Output/
+*.iss
+
+# Temporary files
+*.tmp
+*.bak
+*.old
+

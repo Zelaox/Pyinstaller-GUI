@@ -80,3 +80,7 @@
 2025-10-18 17:01:30,060 [INFO]: Conversion completed!
 2025-10-18 17:01:30,061 [INFO]: Installer compiled successfully
 2025-10-18 17:01:30,061 [INFO]: Installer creation completed successfully!
+2025-10-18 17:15:16,984 [INFO]: Drag and drop list widget initialized with extensions: .py, .pyw
+2025-10-18 17:15:16,985 [INFO]: Initializing file list with drag & drop support
+2025-10-18 17:15:17,126 [INFO]: Loaded profile: Default
+2025-10-18 17:15:17,129 [INFO]: Theme changed to light

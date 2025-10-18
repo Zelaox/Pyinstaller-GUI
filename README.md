@@ -60,6 +60,39 @@ pip install PyQt5 pyinstaller
    - Download from [Inno Setup Website](https://jrsoftware.org/isdl.php)
    - Install to default location or add to PATH
 
+## 🔐 Administrator Privileges
+
+**IMPORTANT:** This application requires Administrator privileges to function properly, especially when:
+- Creating executables in protected directories (like Program Files)
+- Installing packages or tools
+- Modifying system-level settings
+
+### Why Admin Rights Are Needed
+
+The error `[WinError 5] Access Denied` occurs when trying to write to protected directories without admin rights. This tool:
+- **Always requests admin privileges** for the installer (via Inno Setup)
+- Allows you to **optionally require admin** for your converted executables
+
+### Running with Admin Privileges
+
+**Option 1: Run the GUI with Admin Rights**
+- Right-click `enhanced_pyinstaller_gui.py` or the built executable
+- Select "Run as administrator"
+
+**Option 2: Build the GUI with Permanent Admin Request**
+- Run `build_with_admin.bat` (as administrator)
+- The resulting executable will always request admin rights
+
+### Administrator Flag for Your Executables
+
+When creating profiles or configuring builds, you can check:
+- ☑️ **"Require Administrator privileges (UAC elevation)"**
+
+This will make your converted executable request admin rights when launched, useful for:
+- Programs that need to access system files
+- Tools that modify the registry
+- Applications requiring hardware access (e.g., ADB tools)
+
 ## 💻 Usage
 
 ### Basic Usage
