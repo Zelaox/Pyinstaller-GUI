@@ -1,17 +1,29 @@
+#!/usr/bin/env python3
 """
-Main module for the enhanced PyInstaller GUI application.
+Main module for the enhanced PyInstaller GUI application - Linux Version
 This module integrates all the enhancements including modern UI, drag & drop support,
 asynchronous file system operations, batch conversion, and configuration profiles.
+
+Linux-specific changes:
+- Removed Windows UAC/admin privileges
+- Disabled Inno Setup installer creation (Windows-only)
+- Added shebang for direct execution
 """
 
 import sys
 import os
+import platform
 import asyncio
 import logging
 import re
 import time
 from pathlib import Path
 from typing import List, Dict, Any, Optional
+
+# Platform detection for Linux-specific behavior
+IS_LINUX = platform.system() == 'Linux'
+IS_WINDOWS = platform.system() == 'Windows'
+IS_MACOS = platform.system() == 'Darwin'
 
 from PyQt5.QtWidgets import (
     QApplication, QMainWindow, QPushButton, QVBoxLayout, QWidget,
@@ -1049,9 +1061,11 @@ class EnhancedPyInstallerGUI(QMainWindow):
         package_action.triggered.connect(self.package_selected)
         file_menu.addAction(package_action)
         
-        create_installer_action = QAction("Create Installer", self)
-        create_installer_action.setShortcut("Ctrl+I")
-        create_installer_action.triggered.connect(self.create_installer)
+        # Create Installer is disabled on Linux (Inno Setup is Windows-only)
+        # Future: Could implement AppImage, DEB, or RPM packaging here
+        create_installer_action = QAction("Create Installer (Windows only)", self)
+        create_installer_action.setEnabled(False)
+        create_installer_action.setToolTip("Installer creation is only available on Windows (Inno Setup)")
         file_menu.addAction(create_installer_action)
         
         file_menu.addSeparator()
@@ -1642,24 +1656,37 @@ end;
     
     def show_about(self):
         """Show the About dialog."""
+        platform_info = f"{platform.system()} {platform.release()}"
+        python_version = platform.python_version()
+        
         QMessageBox.about(
             self,
-            "About Enhanced PyInstaller GUI",
-            """
+            "About Enhanced PyInstaller GUI - Linux Version",
+            f"""
             <h2>Enhanced PyInstaller GUI</h2>
+            <h3>🐧 Linux Version</h3>
             <p>A modern graphical interface for PyInstaller</p>
-            <p>Version 1.0.0</p>
-            <p>© 2023</p>
-            <p>This application simplifies the process of converting Python scripts to standalone executables.</p>
-            <p>Features:</p>
+            <p><b>Version:</b> 1.0.0-linux</p>
+            <p><b>Platform:</b> {platform_info}</p>
+            <p><b>Python:</b> {python_version}</p>
+            <p>© 2023-2025</p>
+            <p>This application simplifies the process of converting Python scripts to standalone executables on Linux.</p>
+            <p><b>Features:</b></p>
             <ul>
                 <li>Modern user interface with dark mode support</li>
                 <li>Drag and drop support for Python files</li>
                 <li>Configuration profiles for reusing settings</li>
-                <li>Integrated installer creation with Inno Setup</li>
                 <li>Batch conversion for multiple files</li>
-                <li>Automatic updates</li>
+                <li>Additional files support</li>
+                <li>Cross-platform compatible code</li>
             </ul>
+            <p><b>Linux-Specific Notes:</b></p>
+            <ul>
+                <li>No admin privileges required (use sudo if needed)</li>
+                <li>Installer creation disabled (Windows-only)</li>
+                <li>Use PNG icons instead of ICO</li>
+            </ul>
+            <p><b>GitHub:</b> <a href="https://github.com/Zelaox/Pyinstaller-GUI">Zelaox/Pyinstaller-GUI</a></p>
             """
         )
 
@@ -1803,6 +1830,21 @@ end;
 # Main entry point
 if __name__ == "__main__":
     try:
+        # Platform check and info
+        print("=" * 60)
+        print("Enhanced PyInstaller GUI - Linux Version")
+        print("=" * 60)
+        print(f"Platform: {platform.system()} {platform.release()}")
+        print(f"Python: {platform.python_version()}")
+        
+        if not IS_LINUX and not IS_MACOS:
+            print("\nWARNING: This is the Linux version!")
+            print("For Windows, please use the version in the parent directory.")
+            print("=" * 60)
+        
+        print("\nStarting application...")
+        print("=" * 60)
+        
         app = QApplication(sys.argv)
         main_window = EnhancedPyInstallerGUI()
         main_window.show()
@@ -1810,4 +1852,6 @@ if __name__ == "__main__":
     except Exception as e:
         app_logger.error(f"Application error: {e}")
         print(f"Application error: {e}")
+        import traceback
+        traceback.print_exc()
         sys.exit(1)
