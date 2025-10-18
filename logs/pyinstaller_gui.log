@@ -84,3 +84,28 @@
 2025-10-18 17:15:16,985 [INFO]: Initializing file list with drag & drop support
 2025-10-18 17:15:17,126 [INFO]: Loaded profile: Default
 2025-10-18 17:15:17,129 [INFO]: Theme changed to light
+2025-10-18 18:07:54,280 [INFO]: Drag and drop list widget initialized with extensions: .py, .pyw
+2025-10-18 18:07:54,280 [INFO]: Initializing file list with drag & drop support
+2025-10-18 18:07:54,453 [INFO]: Loaded profile: Default
+2025-10-18 18:07:54,455 [INFO]: Theme changed to light
+2025-10-18 18:08:01,057 [INFO]: Opening file dialog to add Python files
+2025-10-18 18:08:04,814 [INFO]: Added 1 Python files via dialog
+2025-10-18 18:08:08,654 [INFO]: Creating executable for D:/AI/ChatGPT/My_programs/exe_converter/enhanced_pyinstaller_gui.py with profile Default
+2025-10-18 18:08:08,654 [INFO]: Command: pyinstaller --onefile --windowed --distpath dist --clean D:/AI/ChatGPT/My_programs/exe_converter/enhanced_pyinstaller_gui.py
+2025-10-18 18:08:08,668 [INFO]: Progress: 20%
+2025-10-18 18:08:08,669 [INFO]: Analyzing imports...
+2025-10-18 18:08:10,673 [INFO]: Progress: 40%
+2025-10-18 18:08:10,674 [INFO]: Collecting modules...
+2025-10-18 18:08:12,684 [INFO]: Progress: 60%
+2025-10-18 18:08:12,684 [INFO]: Building EXE...
+2025-10-18 18:08:14,686 [INFO]: Progress: 80%
+2025-10-18 18:08:14,687 [INFO]: Finalizing package...
+2025-10-18 18:08:28,452 [INFO]: Conversion completed!
+2025-10-18 18:08:28,452 [INFO]: Conversion completed successfully
+2025-10-18 18:08:28,454 [INFO]: Executable creation completed. Creating installer...
+2025-10-18 18:08:28,454 [INFO]: Looking for executable at: d:\AI\ChatGPT\My_programs\exe_converter\dist\enhanced_pyinstaller_gui.exe
+2025-10-18 18:08:53,763 [INFO]: Installer creation cancelled by user.
+2025-10-18 18:09:54,878 [INFO]: Drag and drop list widget initialized with extensions: .py, .pyw
+2025-10-18 18:09:54,878 [INFO]: Initializing file list with drag & drop support
+2025-10-18 18:09:55,019 [INFO]: Loaded profile: Default
+2025-10-18 18:09:55,021 [INFO]: Theme changed to light

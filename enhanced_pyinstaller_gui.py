@@ -1609,19 +1609,25 @@ end;
     
     def manage_profiles(self):
         """Open the profile management dialog."""
-        dialog = ProfileManagementDialog(self.profile_manager, self)
-        result = dialog.exec_()
-        
-        if result == QDialog.Accepted:
-            # Refresh current profile in case it was modified
-            if self.current_profile:
-                self.current_profile = self.profile_manager.get_profile(self.current_profile.name)
-                if not self.current_profile:
-                    # Current profile was deleted, load default
-                    self.current_profile = self.profile_manager.get_default_profile()
-                    if self.current_profile:
-                        self.log_message(f"Loaded default profile: {self.current_profile.name}")
-                        self.statusBar().showMessage(f"Profile: {self.current_profile.name}", 3000)
+        try:
+            dialog = ProfileManagementDialog(self.profile_manager, self)
+            result = dialog.exec_()
+            
+            if result == QDialog.Accepted:
+                # Refresh current profile in case it was modified
+                if self.current_profile:
+                    self.current_profile = self.profile_manager.get_profile(self.current_profile.name)
+                    if not self.current_profile:
+                        # Current profile was deleted, load default
+                        self.current_profile = self.profile_manager.get_default_profile()
+                        if self.current_profile:
+                            self.log_message(f"Loaded default profile: {self.current_profile.name}")
+                            self.statusBar().showMessage(f"Profile: {self.current_profile.name}", 3000)
+        except Exception as e:
+            self.log_message(f"Error opening profile management dialog: {str(e)}")
+            import traceback
+            self.log_message(f"Traceback: {traceback.format_exc()}")
+            QMessageBox.critical(self, "Error", f"Failed to open profile management dialog:\n{str(e)}")
     
     def select_profile(self):
         """Open the profile selection dialog."""
