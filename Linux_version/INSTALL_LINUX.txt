@@ -1,0 +1,146 @@
+═══════════════════════════════════════════════════════════════
+  ENHANCED PYINSTALLER GUI - LINUX VERSION
+  Quick Installation & Usage Guide
+═══════════════════════════════════════════════════════════════
+
+╔═══════════════════════════════════════════════════════════════╗
+║  STEP 1: CLONE THE REPOSITORY                                 ║
+╚═══════════════════════════════════════════════════════════════╝
+
+Open a terminal and run:
+
+  git clone https://github.com/Zelaox/Pyinstaller-GUI.git
+  cd Pyinstaller-GUI/Linux_version
+
+╔═══════════════════════════════════════════════════════════════╗
+║  STEP 2: INSTALL DEPENDENCIES                                 ║
+╚═══════════════════════════════════════════════════════════════╝
+
+Ubuntu/Debian:
+  sudo apt-get update
+  sudo apt-get install python3 python3-pip
+  pip3 install PyQt5 pyinstaller
+
+Fedora/RHEL:
+  sudo dnf install python3 python3-pip
+  pip3 install PyQt5 pyinstaller
+
+Arch Linux:
+  sudo pacman -S python python-pip
+  pip3 install PyQt5 pyinstaller
+
+╔═══════════════════════════════════════════════════════════════╗
+║  STEP 3: RUN THE APPLICATION                                  ║
+╚═══════════════════════════════════════════════════════════════╝
+
+Option A - Using the launcher script (recommended):
+  chmod +x run_gui.sh
+  ./run_gui.sh
+
+Option B - Direct Python execution:
+  python3 enhanced_pyinstaller_gui.py
+
+╔═══════════════════════════════════════════════════════════════╗
+║  BASIC USAGE                                                  ║
+╚═══════════════════════════════════════════════════════════════╝
+
+1. Drag and drop your Python (.py) files into the window
+   OR click "Add Files" to browse
+
+2. Configure options:
+   • One File / One Folder mode
+   • Console / Windowed mode
+   • Custom icon (use .png files)
+   • Additional files to include
+
+3. Click "Create EXE" to build your executable
+
+4. Find your executable in:
+   ./dist/your_app_name
+
+5. Make it executable:
+   chmod +x dist/your_app_name
+
+6. Run it:
+   ./dist/your_app_name
+
+╔═══════════════════════════════════════════════════════════════╗
+║  KEY DIFFERENCES FROM WINDOWS VERSION                         ║
+╚═══════════════════════════════════════════════════════════════╝
+
+✓ NO administrator/sudo required for creating executables
+✓ NO installer creation (Inno Setup is Windows-only)
+✓ NO UAC/admin privileges option
+✓ Works with standard Linux file permissions
+✓ Output goes to ./dist/ in your user directory
+
+If your app needs root access, users run:
+  sudo ./your_app
+
+╔═══════════════════════════════════════════════════════════════╗
+║  CREATING A DESKTOP SHORTCUT                                  ║
+╚═══════════════════════════════════════════════════════════════╝
+
+1. Create a .desktop file:
+   nano ~/.local/share/applications/pyinstaller-gui.desktop
+
+2. Add this content:
+   [Desktop Entry]
+   Version=1.0
+   Type=Application
+   Name=Enhanced PyInstaller GUI
+   Comment=Convert Python scripts to executables
+   Exec=/path/to/Linux_version/enhanced_pyinstaller_gui.py
+   Icon=application-x-executable
+   Terminal=false
+   Categories=Development;
+
+3. Make it executable:
+   chmod +x ~/.local/share/applications/pyinstaller-gui.desktop
+
+4. The app will appear in your applications menu!
+
+╔═══════════════════════════════════════════════════════════════╗
+║  TROUBLESHOOTING                                              ║
+╚═══════════════════════════════════════════════════════════════╝
+
+Problem: "ModuleNotFoundError: No module named 'PyQt5'"
+Solution: pip3 install PyQt5
+
+Problem: "Permission denied" when running executable
+Solution: chmod +x dist/your_app
+
+Problem: Missing system libraries
+Solution (Ubuntu/Debian):
+  sudo apt-get install python3-dev libx11-dev libxext-dev
+
+Problem: Icon not showing
+Solution: Use PNG format instead of ICO
+  convert icon.ico icon.png
+
+╔═══════════════════════════════════════════════════════════════╗
+║  TESTED ON                                                    ║
+╚═══════════════════════════════════════════════════════════════╝
+
+✓ Ubuntu 20.04 LTS
+✓ Ubuntu 22.04 LTS
+⚠ Other distributions (should work, not fully tested)
+
+╔═══════════════════════════════════════════════════════════════╗
+║  NEED HELP?                                                   ║
+╚═══════════════════════════════════════════════════════════════╝
+
+• Read: README_LINUX.md
+• Read: LINUX_CHANGES.md
+• GitHub Issues: https://github.com/Zelaox/Pyinstaller-GUI/issues
+• Email: Ferrari.kim@hotmail.com
+
+╔═══════════════════════════════════════════════════════════════╗
+║  ENJOY! 🐧                                                    ║
+╚═══════════════════════════════════════════════════════════════╝
+
+This is free, open-source software. Use at your own risk.
+No warranty provided. Test thoroughly before distributing your apps!
+
+═══════════════════════════════════════════════════════════════
+
