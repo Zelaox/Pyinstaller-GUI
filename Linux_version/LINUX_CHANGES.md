@@ -19,7 +19,7 @@ This document lists all the changes made to adapt the Enhanced PyInstaller GUI f
 ### Files Removed
 
 1. **admin_manifest.xml** - Windows UAC manifest (not needed on Linux)
-2. **build_with_admin.bat** - Windows batch script
+2. **build.bat** - Windows batch script (no longer requires admin)
 3. **ADMIN_PRIVILEGES_GUIDE.md** - Windows admin guide
 
 ### Features Removed

@@ -80,8 +80,8 @@ The error `[WinError 5] Access Denied` occurs when trying to write to protected 
 - Select "Run as administrator"
 
 **Option 2: Build the GUI with Permanent Admin Request**
-- Run `build_with_admin.bat` (as administrator)
-- The resulting executable will always request admin rights
+- Run `build.bat` (no admin required to build)
+- The resulting executable will request admin rights when launched
 
 ### Administrator Flag for Your Executables
 

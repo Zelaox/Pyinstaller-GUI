@@ -22,10 +22,12 @@ PermissionError: [WinError 5] Åtkomst nekad: 'C:\\Program Files (x86)\\Pyinstal
 3. Confirm the UAC prompt
 
 #### Option B: Build with Permanent Admin Request
-1. Open Command Prompt or PowerShell **as Administrator**
+1. Open Command Prompt or PowerShell (no admin required)
 2. Navigate to the project directory
-3. Run: `build_with_admin.bat`
+3. Run: `build.bat`
 4. The resulting executable will **always** request admin rights when launched
+
+**Note:** PyInstaller 7.0+ blocks building as admin. The build script runs as normal user, but the OUTPUT executable requests admin via the `--uac-admin` flag.
 
 ### 2. For Your Converted Executables
 
@@ -69,9 +71,10 @@ This means:
    - UAC manifest for Windows
    - Requests administrator execution level
 
-4. **build_with_admin.bat** (NEW)
+4. **build.bat** (NEW)
    - Automated build script
-   - Builds the GUI with admin privileges embedded
+   - Uses --uac-admin flag (no admin required to build)
+   - Output executable requests admin when launched
 
 5. **.gitignore** (NEW)
    - Prevents committing build artifacts
@@ -115,8 +118,8 @@ This means:
 ### Problem: "This app requires administrator privileges"
 **Solution**: Right-click and "Run as administrator"
 
-### Problem: Build script fails
-**Solution**: Make sure you're running Command Prompt/PowerShell as Administrator
+### Problem: Build script fails with PyInstaller admin warning
+**Solution**: Run `build.bat` as a normal user (NOT as administrator). PyInstaller 7.0+ blocks admin builds. The `--uac-admin` flag makes the OUTPUT exe request admin, not the build process.
 
 ### Problem: Installer won't run
 **Solution**: The installer requires admin by default. Right-click → "Run as administrator"
